@@ -44,7 +44,7 @@ function updateExchangeRate() {
 
 
   let apiKey = 'c174d32b2e9d0faba28bb49f';
-  let apiUrl = https://open.er-api.com/v6/latest/${fromCurrency}?apikey=${apiKey};
+  let apiUrl = `https://open.er-api.com/v6/latest/${fromCurrency}?apikey=${apiKey}`;
 
   fetch(apiUrl)
     .then(response => response.json())
@@ -52,8 +52,8 @@ function updateExchangeRate() {
       let exchangeRate = data.rates[toCurrency];
       let rateElement = document.querySelector(".rate");
       let rateElement2 = document.querySelector(".rate2");
-      rateElement2.textContent = 1 ${toCurrency} = ${exchangeRate} ${fromCurrency};
-      rateElement.textContent = 1 ${fromCurrency} = ${exchangeRate} ${toCurrency};
+      rateElement2.textContent = `1 ${toCurrency} = ${exchangeRate} ${fromCurrency}`;
+      rateElement.textContent = `1 ${fromCurrency} = ${exchangeRate} ${toCurrency}`;
       updateConvertedAmount("amount-one", "amount-two", ".currency-first button.selected", ".currency-second button.selected", ".rate2");
       updateConvertedAmount("amount-one", "amount-two", ".currency-second button.selected", ".currency-first button.selected", ".rate");
     })
@@ -68,9 +68,8 @@ function updateConvertedAmount(fromInputId, toInputId, fromCurrencySelector, toC
 
 
   let apiKey = 'c174d32b2e9d0faba28bb49f';
-  let apiUrl = https://open.er-api.com/v6/latest/${fromCurrency}?apikey=${apiKey};
+  let apiUrl =`https://open.er-api.com/v6/latest/${fromCurrency}?apikey=${apiKey}`;
 
-Zameddin İsrafilov, [15.11.2023 15:51]
 fetch(apiUrl)
     .then(response => response.json())
     .then(data => {
@@ -81,7 +80,7 @@ fetch(apiUrl)
 if (toInputElement.value == 0.0000) {
         toInputElement.value = ''
       }
-      document.querySelector(rateElementSelector).textContent = 1 ${fromCurrency} = ${exchangeRate.toFixed(4)} ${toCurrency};
+      document.querySelector(rateElementSelector).textContent = `1 ${fromCurrency} = ${exchangeRate.toFixed(4)} ${toCurrency}`;
     })
     .catch(error => console.error("Error fetching exchange rates:", error));
 }
@@ -96,7 +95,7 @@ function updateExchangeRate2() {
 
 
   let apiKey = 'c174d32b2e9d0faba28bb49f';
-  let apiUrl = https://open.er-api.com/v6/latest/${fromCurrency}?apikey=${apiKey};
+  let apiUrl =`https://open.er-api.com/v6/latest/${fromCurrency}?apikey=${apiKey}`;
 
   fetch(apiUrl)
     .then(response => response.json())
@@ -104,8 +103,8 @@ function updateExchangeRate2() {
       let exchangeRate = data.rates[toCurrency];
       let rateElement = document.querySelector(".rate");
       let rateElement2 = document.querySelector(".rate2");
-      rateElement2.textContent = 1 ${toCurrency} = ${exchangeRate} ${fromCurrency};
-      rateElement.textContent = 1 ${fromCurrency} = ${exchangeRate} ${toCurrency};
+      rateElement2.textContent = `1 ${toCurrency} = ${exchangeRate} ${fromCurrency}`;
+      rateElement.textContent = `1 ${fromCurrency} = ${exchangeRate} ${toCurrency}`;
       updateConvertedAmount2("amount-two", "amount-one", ".currency-first button.selected", ".currency-second button.selected", ".rate");
       updateConvertedAmount2("amount-two", "amount-one", ".currency-second button.selected", ".currency-first button.selected", ".rate2");
     })
@@ -120,7 +119,7 @@ function updateConvertedAmount2(fromInputId, toInputId, fromCurrencySelector, to
 
 
   let apiKey = 'c174d32b2e9d0faba28bb49f';
-  let apiUrl = https://open.er-api.com/v6/latest/${fromCurrency}?apikey=${apiKey};
+  let apiUrl = `https://open.er-api.com/v6/latest/${fromCurrency}?apikey=${apiKey}`;
 
   fetch(apiUrl)
     .then(response => response.json())
@@ -133,7 +132,7 @@ function updateConvertedAmount2(fromInputId, toInputId, fromCurrencySelector, to
      if (toInputElement.value == 0.0000) {
         toInputElement.value = ''
       }
-      document.querySelector(rateElementSelector).textContent = 1 ${fromCurrency} = ${exchangeRate.toFixed(4)} ${toCurrency};
+      document.querySelector(rateElementSelector).textContent = `1 ${fromCurrency} = ${exchangeRate.toFixed(4)} ${toCurrency}`;
     })
 
     .catch(error => console.error("Error fetching exchange rates:", error));
