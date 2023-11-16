@@ -78,7 +78,9 @@ fetch(apiUrl)
       let convertedAmount = (isNaN(amountFrom) ? 0 : amountFrom) * exchangeRate;
       let toInputElement = document.getElementById(toInputId);
       toInputElement.value = convertedAmount.toFixed(4);
-
+if (toInputElement.value == 0.0000) {
+        toInputElement.value = ''
+      }
       document.querySelector(rateElementSelector).textContent = 1 ${fromCurrency} = ${exchangeRate.toFixed(4)} ${toCurrency};
     })
     .catch(error => console.error("Error fetching exchange rates:", error));
@@ -128,7 +130,9 @@ function updateConvertedAmount2(fromInputId, toInputId, fromCurrencySelector, to
       let toInputElement = document.getElementById(toInputId);
 
       toInputElement.value = convertedAmount.toFixed(4);
-     
+     if (toInputElement.value == 0.0000) {
+        toInputElement.value = ''
+      }
       document.querySelector(rateElementSelector).textContent = 1 ${fromCurrency} = ${exchangeRate.toFixed(4)} ${toCurrency};
     })
 
