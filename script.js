@@ -43,7 +43,7 @@ function updateExchangeRate() {
   let fromCurrency = document.querySelector(".currency-first button.selected").textContent;
 
 
-  let apiKey = 'dea2e6123933d630b4b61bee';
+  let apiKey = 'c174d32b2e9d0faba28bb49f';
   let apiUrl = https://open.er-api.com/v6/latest/${fromCurrency}?apikey=${apiKey};
 
   fetch(apiUrl)
@@ -67,7 +67,7 @@ function updateConvertedAmount(fromInputId, toInputId, fromCurrencySelector, toC
   let fromCurrency = document.querySelector(toCurrencySelector).textContent;
 
 
-  let apiKey = 'dea2e6123933d630b4b61bee';
+  let apiKey = 'c174d32b2e9d0faba28bb49f';
   let apiUrl = https://open.er-api.com/v6/latest/${fromCurrency}?apikey=${apiKey};
 
 Zameddin İsrafilov, [15.11.2023 15:51]
@@ -93,7 +93,7 @@ function updateExchangeRate2() {
 
 
 
-  let apiKey = 'dea2e6123933d630b4b61bee';
+  let apiKey = 'c174d32b2e9d0faba28bb49f';
   let apiUrl = https://open.er-api.com/v6/latest/${fromCurrency}?apikey=${apiKey};
 
   fetch(apiUrl)
@@ -117,7 +117,7 @@ function updateConvertedAmount2(fromInputId, toInputId, fromCurrencySelector, to
   let toCurrency = document.querySelector(toCurrencySelector).textContent;
 
 
-  let apiKey = 'dea2e6123933d630b4b61bee';
+  let apiKey = 'c174d32b2e9d0faba28bb49f';
   let apiUrl = https://open.er-api.com/v6/latest/${fromCurrency}?apikey=${apiKey};
 
   fetch(apiUrl)
