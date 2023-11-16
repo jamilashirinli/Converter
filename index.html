@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+  <header>
+     <nav>
+        <img class='img1' src="/Asset 1@3x 1.png" alt="bank">
+        <p class="bank"><b>БАНК</b></p>
+        <p class="biznes"><b>БИЗНЕС</b></p>
+        <p class="investisiya"><b>ИНВЕСТИЦИИ</b></p>
+        <p class="strax"><b>СТРАХОВАНИЕ</b></p>
+        <p class="mobile"><b>МОБАЙЛ</b></p>
+        <p class="lutesel"><b>ПУТЕШЕСТВИЯ</b></p>
+        <p class="razv"><b>РАЗВЛЕЧЕНИЯ</b></p>
+        <p class="voyti"><b>ВОЙТИ</b></p>
+     </nav>
+  </header>
+  <main>
+    <div class="container">
+      <h1>Конвертер валют онлайн</h1>
+      <div class="converters">
+        <div class="converter">
+          <div class="info">
+            <p>У меня есть</p>
+          </div>
+
+          <div class="currency-first">
+            <button class="right-rub ">RUB</button>
+            <button class="right-usd">USD</button>
+            <button class="right-eur">EUR</button>
+            <button class="right-try">TRY</button>
+          </div>
+
+          <div class="input">
+            <input type="number" id="amount-one">
+            <p class="rate"></p>
+          </div>
+
+        </div>
+        <div class="converter">
+          <div class="info">
+            <p>Хочу приобрести</p>
+          </div>
+          <div class="currency-second">
+            <button class="left-rub">RUB</button>
+            <button class="left-usd  ">USD</button>
+            <button class="left-eur">EUR</button>
+            <button class="left-try">TRY</button>
+          </div>
+          <div class="input">
+            <input type="number" id="amount-two">
+            <p class="rate2"></p>
+          </div>
+        </div>
+        <script src="script.js"></script>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
